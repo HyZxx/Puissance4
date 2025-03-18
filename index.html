@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puissance 4</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.72/build/spline-viewer.js"></script>
+</head>
+<body>
+    <spline-viewer url="https://prod.spline.design/MPDIg3aZboo0WoRn/scene.splinecode"></spline-viewer>
+    <div id="setup" class="input-container">
+        <h2>Choisissez la taille de la grille</h2>
+        <input type="number" id="grid-rows" placeholder="Nombre de lignes" min="6" max="12">
+        <input type="number" id="grid-cols" placeholder="Nombre de colonnes" min="6" max="28">
+        <h2>Entrez les noms des joueurs</h2>
+        <input type="text" id="player1" placeholder="Nom du joueur Orange">
+        <input type="text" id="player2" placeholder="Nom du joueur Mauve">
+        <button onclick="startGame()">Commencer</button>
+    </div>
+    <div id="game" class="hidden">
+        <button class="back-button" onclick="resetGame()">Retour</button>
+        <button class="restart-button" onclick="restartGame()">Relancer</button>
+
+        <h1>Puissance 4</h1>
+        <h2 id="player-turn"></h2>
+        <div class="board-container">
+            <div class="board" id="board"></div>
+        </div>
+        <div class="player-info" id="player-info"></div>
+    </div>
+
+    <script src="/lib/script.js"></script>
+</body>
+</html>

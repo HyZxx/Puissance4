@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+spline-viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+.hidden {
+    display: none;
+}
+.input-container {
+    margin-bottom: 20px;
+    position: absolute;
+    top: 10%;
+}
+.input-container input, .input-container button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+.input-container button {
+    background-color: #ff6600;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.input-container button:hover {
+    background-color: #e65c00;
+}
+.board-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.board {
+    display: grid;
+    gap: 5px;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(6px);
+    max-width: 80vw;
+    max-height: 70vh;
+}
+.cell {
+    width: min(50px, 6vw);
+    height: min(50px, 6vw);
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.orange {
+    background-color: rgb(253, 115, 35);
+}
+.mauve {
+    background-color: rgb(175, 104, 241);
+}
+.player-info {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.back-button, .restart-button {
+    position: absolute;
+    left: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.back-button {
+    top: 20px;
+    background-color: red;
+}
+.back-button:hover {
+    background-color: darkred;
+}
+.restart-button {
+    top: 70px;
+    background-color: #007bff;
+}
+.restart-button:hover {
+    background-color: #0056b3;
+}
